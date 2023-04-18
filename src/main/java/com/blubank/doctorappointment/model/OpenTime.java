@@ -27,11 +27,6 @@ public class OpenTime extends BaseEntity implements Serializable {
     @Column(name = "endTime", nullable = false)
     private LocalDateTime endTime;
 
-//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-//    @JoinColumn(name = "doctor_id")
-//    @OnDelete(action = OnDeleteAction.CASCADE)
-//    @JsonIgnore
-//    private Doctor doctor;
 
     @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)

@@ -13,7 +13,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DoctorOpenTimeSlotResponse {
+public class    DoctorOpenTimeSlotResponse {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime openTimeAppointment;
 

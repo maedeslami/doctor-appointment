@@ -1,18 +1,17 @@
 package com.blubank.doctorappointment.service.doctor;
 
-import com.blubank.doctorappointment.dto.doctorDto.DoctorOpenTimeResponse;
-import com.blubank.doctorappointment.dto.doctorDto.DoctorOpenTimeSlotResponse;
-import com.blubank.doctorappointment.dto.doctorDto.OpenTimeDto;
-import com.blubank.doctorappointment.model.Doctor;
+import com.blubank.doctorappointment.dto.doctorDto.*;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 
 public interface DoctorService {
     void addTime(OpenTimeDto doctor) throws Exception ;
+    List<DoctorOpenTimeSlotResponse> getAllOpenTimes();
+    List<DoctorOpenTimeSlotResponse> getAppointmentsByCellNumber(String cellNumber);
 
-//    Doctor findById(Long doctorId);
+    AppointmentReserveResult reserve(AppointmentReserveModel model) throws Exception;
 
-    List<DoctorOpenTimeSlotResponse> getAllOpenTimesForToday(LocalDateTime date);
+    Long deleteAppointment(Long appointmentId) ;
 }

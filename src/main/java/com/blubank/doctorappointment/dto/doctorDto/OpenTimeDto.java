@@ -16,17 +16,16 @@ import java.util.Date;
 @ToString
 public class OpenTimeDto {
     @NotNull
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd",timezone = "IRST")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,timezone = "IRST")
      private LocalDateTime date;
 
-
     @NotNull
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm",timezone = "IRST")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,timezone = "IRST")
      private LocalDateTime startTime;
 
     @NotNull
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "HH:mm",timezone = "IRST")
-     private LocalDateTime endTime;
+    @JsonFormat(shape = JsonFormat.Shape.STRING,timezone = "IRST")
+    private LocalDateTime endTime;
 
 
 

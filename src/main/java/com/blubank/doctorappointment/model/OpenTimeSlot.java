@@ -33,5 +33,11 @@ public class OpenTimeSlot extends BaseEntity implements Serializable {
     private Patient patientAppointment;
 
 
+    @Column(name = "status", nullable = false)
+    @Enumerated(EnumType.STRING)
+    private AppointmentStatus status;
+
+
+
 
 }
